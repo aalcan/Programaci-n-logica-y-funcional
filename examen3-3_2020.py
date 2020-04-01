@@ -87,7 +87,7 @@ camisas = ["roja","negra","azul","morada","cafe"]
 pantalones = ["negro", "azul", "cafe obscuro", "crema"]
 accesorios = ["cinturon", "tirantes", "lentes", "fedora"]
 combinaciones = [(x, y, z) for y in camisas for x in pantalones for z in accesorios]
-#print(combinaciones)
+print(combinaciones)
 print("El número de combinaciones es:",len(combinaciones))
 """
     
@@ -134,16 +134,7 @@ Nota: Pueden ayudarse de funciones recursivas y compresiones de lista.
 
 --Hole in my soul apocalyptica--  20 pts
 
-There's a hole in my heart, in my life, in my way
-And it's filled with regret and all I did, to push you away
-If there's still a place in your life, in your heart for me
-I would do anything, so don't ask me to leave
 
-I've got a hole in my soul where you use to be
-You're the thorn in my heart and you're killing me
-I wish I could go back and do it all differently
-I wish that I'd treated you differently
-'Cause now there's a hole in my soul where you use to be
 
 El fragmento anterior es un canción del grupo apocalyptica
 
@@ -154,3 +145,20 @@ letra.
 Nota: Pueden ayudarse de funciones recursivas y compresiones de lista. 
 
 """
+cancion = """There's a hole in my heart, in my life, in my way
+And it's filled with regret and all I did, to push you away
+If there's still a place in your life, in your heart for me
+I would do anything, so don't ask me to leave
+
+I've got a hole in my soul where you use to be
+You're the thorn in my heart and you're killing me
+I wish I could go back and do it all differently
+I wish that I'd treated you differently
+'Cause now there's a hole in my soul where you use to be"""
+cancion = list(cancion)#Lo hacemos una lista
+frecuenciaPalab = [cancion.count(w.casefold()) for w in cancion] #contamos la frecuencia de cada letra sin importarnos si la letra se repite
+letra = filter(lambda a: cancion.count(a) == min(frecuenciaPalab),cancion) #aplicamos un filtro a esa lista que nos devuela las letras que coinciden con el numero minimo en la frecuencia de letras que ya habiamos calculado
+Y = list(letra)#Lo hacemos lista
+Y = dict.fromkeys(Y).keys()#Para evitar valores duplicados que en un diccionario no se pueden duplicar los valores
+print(Y)
+
