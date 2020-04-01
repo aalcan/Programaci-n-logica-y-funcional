@@ -1,4 +1,4 @@
 # Programaci-n-logica-y-funciona
 Integrantes:
--Armando Alcanatara LAgunas 16590441
--Julio Gonzalez
+- Armando Alcanatara Lagunas 16590441
+- Julio ALberto Gonzalez de Jesús 16590585
