@@ -53,8 +53,7 @@ Bada Boom!!! <generadores> 20 pts
 """
 def genBadaBoom(N):
 	if N > 0:
-		i = 1
-		while i<= N:
+		for i in range(1,N+1):
 			if(i % 3 == 0 and i % 5 == 0):
 				yield "Bada Boom!!"
 			elif(i % 3 == 0):
@@ -63,7 +62,7 @@ def genBadaBoom(N):
 				yield "Boom!!"
 			else:
 				yield i
-			i = i+1
+			
 a = genBadaBoom(10)
 z = [e for e in a]
 print(z)
