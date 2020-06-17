@@ -58,6 +58,16 @@ Base = [
 	["EUA","America"]
 ]
 
+"""
+Se hicieron dos versiones del código.
+
+Versión 1: Funciona pero solo tendrá un recorrido de 3. Persona-Estado, Estado-Pais, Pais-Continente.
+
+Version 2: Esta versión hará los recorridos necesarios. Y podremos mandarle más convinaciones, ejemplo ("Mexico", "America"), o ("Laura","Mexico")
+
+
+"""
+
 def esta(E1,E2):
 	R =[ Base[x][1] for x in range(0,len(Base)) if E1 == Base[x][0] ]
 	if len(R)>0:
