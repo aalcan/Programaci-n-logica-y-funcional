@@ -27,7 +27,7 @@ nip(F) :-
 	string_chars(F,R),
 	suma_lista(R),
     length(R,T),
-    T==3.
+    T==4.
 %
 % Desarrolle un predicado que permita validar un octeto de una ip
 % Responde a la siguiente gramatica
