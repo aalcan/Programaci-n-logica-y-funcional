@@ -32,21 +32,21 @@
 %	false
 %
 %
-opr(+).
-opr(-).
-opr(*).
-opr(/).
-num(0).
-num(1).
-num(2).
-num(3).
-num(4).
-num(5).
-num(6).
-num(7).
-num(8).
-num(9).
+opr("+").
+opr("-").
+opr("*").
+opr("/").
+numero(0).
+numero(1).
+numero(2).
+numero(3).
+numero(4).
+numero(5).
+numero(6).
+numero(7).
+numero(8).
+numero(9).
 
-expr(A,B,C) :- opr(A),num(B),num(C).
-is_number(N) :- atom(N)
-number(Z) :- not is_number(Z).
+expr(A,B,C) :- opr(A),numero(B),numero(C).
+is_number(N) :- atom(N).
+num(Z) :-  not(is_number(Z)).
